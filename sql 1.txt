@@ -1,0 +1,20 @@
+drop table books;
+create database BooksDB;
+use BooksDB;
+create table books(
+bookstitle varchar(30),
+author varchar(30),
+genre varchar(30),
+publicationyear int,
+price int
+);
+describe books;
+insert into books values("Harry potter","J.k. Rowling","Fantacy",1998,499);
+insert into books values("Wings of Fire","A.P.J.Abdul Kalam ","Autobiography",1999,599);
+insert into books values("Kamba Ramayanam","Kambar","Devotional",101,399);
+insert into books values("Silapathikaram","Ilango Adigal","Historical",400,299);
+insert into books values("The India Story", "grand os","history",1988,699);
+select * from books;
+select bookstitle,author,genre,publicationyear,price from books where bookstitle="Harry potter";
+update books set price=1000 where bookstitle="Harry potter";
+delete  from books  where bookstitle="Kamba Ramayanam";
